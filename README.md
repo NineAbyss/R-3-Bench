@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="figs/profile.png" height="40" alt="" align="center" />
+  <img src="figs/profile.png" height="40" alt="" align="absmiddle" />&nbsp;
   R<sup>3</sup>-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets
 </h1>
 
