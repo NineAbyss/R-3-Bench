@@ -20,9 +20,9 @@ This is the official implementation of the following paper:
 <p align="center"><em>The main result of R<sup>3</sup>-Bench.</em></p>
 
 
-# R3Bench evaluator
+# R<sup>3</sup>-Bench evaluator
 
-R3Bench measures how a model allocates a shared resource across six problems.
+R<sup>3</sup>-Bench measures how a model allocates a shared resource across six problems.
 
 ```text
 choose domain / setting / model
