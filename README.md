@@ -34,7 +34,7 @@ choose domain / setting / model
 → compute Contest–Oracle Gap and Gap Ratio
 ```
 
-## Install
+## 1. Install 🔧
 
 Python 3.10 or newer is required.
 
@@ -51,7 +51,7 @@ python scripts/run_user_acceptance_smoke.py
 
 The acceptance smoke is bounded, deterministic, and network-free.
 
-## Five-minute map
+## 2. Five-minute map 🗺️
 
 | Question | Answer |
 |---|---|
@@ -64,7 +64,7 @@ The acceptance smoke is bounded, deterministic, and network-free.
 | How do I score? | Use `r3bench score` on saved outputs. |
 | How do I compute the Oracle? | Build six-level, five-repeat analysis inputs, then run `r3bench analysis compare`. |
 
-## Run a bounded condition
+## 3. Run a bounded condition 🔥
 
 Tool-Free contest:
 
@@ -94,7 +94,7 @@ Explicit CLI budgets take priority over named paper-reference profiles. A
 custom budget is a valid new condition, but it is not the paper's rho=0.2 or
 rho=0.8 cell. List optional reference profiles with `r3bench budgets list`.
 
-## Score and analyze
+## 4. Score and analyze 🏆
 
 ```bash
 r3bench score \
@@ -113,7 +113,7 @@ r3bench analysis compare \
 
 Mock scoring checks the interface only. It is not a benchmark result.
 
-## Data and external integrations
+## 5. Data and external integrations 📚
 
 Datasets are in `datasets`.
 
@@ -122,7 +122,7 @@ same resolved request with `--dry-run`. Real Agentic backends require the
 additional `--allow-agentic-backend` gate. Coding hidden tests and
 LightCPVerifier assets are not included and are never started by the evaluator.
 
-## Documentation
+## 6. Documentation 📖
 
 - [Quickstart](docs/QUICKSTART.md)
 - [Architecture](docs/ARCHITECTURE.md)
