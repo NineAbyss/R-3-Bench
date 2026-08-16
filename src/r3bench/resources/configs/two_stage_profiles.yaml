@@ -1,0 +1,115 @@
+schema_version: "1.0"
+status: release
+profiles:
+  deepseek_chat_coding_two_stage:
+    profile_id: deepseek_chat_coding_two_stage
+    applicable_models: [deepseek-chat]
+    applicable_domains: [coding]
+    stage1_model_key: deepseek-chat
+    stage2_model_key: deepseek-chat
+    stage1_thinking_enabled: false
+    stage2_thinking_enabled: false
+    stage2_handoff_channels: [visible_output]
+    stage2_prompt_assembly: coding_visible_output_only
+    stage2_include_original_problems: false
+    budget_accounting: stage1_only_with_practical_stage2_cap
+    stage2_practical_cap: 65536
+    provenance_source: approved_protocol_metadata
+    status: release
+    notes: The approved protocol records a 65536-token Stage 2 cap.
+  qwen_coding_two_stage:
+    profile_id: qwen_coding_two_stage
+    applicable_models: [qwen3.7-max]
+    applicable_domains: [coding]
+    stage1_model_key: qwen3.7-max
+    stage2_model_key: qwen3.7-max
+    stage1_thinking_enabled: true
+    stage2_thinking_enabled: false
+    stage2_handoff_channels: [reasoning_content, visible_output]
+    stage2_prompt_assembly: coding_reasoning_visible_trace
+    stage2_include_original_problems: false
+    budget_accounting: stage1_only_with_practical_stage2_cap
+    stage2_practical_cap: 65536
+    provenance_source: approved_protocol_metadata
+    status: release
+    notes: Reported budget is Stage 1; Stage 2 uses a practical 65536-token cap.
+  deepseek_reasoner_coding_two_stage:
+    profile_id: deepseek_reasoner_coding_two_stage
+    applicable_models: [deepseek-reasoner]
+    applicable_domains: [coding]
+    stage1_model_key: deepseek-reasoner
+    stage2_model_key: deepseek-chat
+    stage1_thinking_enabled: true
+    stage2_thinking_enabled: false
+    stage2_handoff_channels: [reasoning_content, visible_output]
+    stage2_prompt_assembly: coding_reasoning_visible_trace
+    stage2_include_original_problems: false
+    budget_accounting: stage1_only_with_practical_stage2_cap
+    stage2_practical_cap: 65536
+    provenance_source: approved_protocol_metadata
+    status: release
+    notes: Reported budget is Stage 1; Stage 2 uses DeepSeek Chat with a practical 65536-token cap.
+  deepseek_v4_coding_two_stage:
+    profile_id: deepseek_v4_coding_two_stage
+    applicable_models: [deepseek-v4-pro]
+    applicable_domains: [coding]
+    stage1_model_key: deepseek-v4-pro
+    stage2_model_key: deepseek-chat
+    stage1_thinking_enabled: true
+    stage2_thinking_enabled: false
+    stage2_handoff_channels: [reasoning_content, visible_output]
+    stage2_prompt_assembly: coding_reasoning_visible_trace
+    stage2_include_original_problems: false
+    budget_accounting: stage1_only_with_practical_stage2_cap
+    stage2_practical_cap: 65536
+    provenance_source: approved_protocol_metadata
+    status: release
+    notes: Reported budget is Stage 1; Stage 2 uses DeepSeek Chat with a practical 65536-token cap.
+  qwen_math_ar_two_stage:
+    profile_id: qwen_math_ar_two_stage
+    applicable_models: [qwen3.7-max]
+    applicable_domains: [math, abstract_reasoning]
+    stage1_model_key: qwen3.7-max
+    stage2_model_key: qwen3.7-max
+    stage1_thinking_enabled: true
+    stage2_thinking_enabled: false
+    stage2_handoff_channels: [reasoning_content, visible_output]
+    stage2_prompt_assembly: reasoning_visible_trace
+    stage2_include_original_problems: false
+    budget_accounting: stage1_only_with_practical_stage2_cap
+    stage2_practical_cap: null
+    provenance_source: approved_protocol_metadata
+    status: release
+    notes: Reported budget is Stage 1; trace-only finalization omits an explicit Stage 2 output-token cap.
+  deepseek_reasoner_math_ar_two_stage:
+    profile_id: deepseek_reasoner_math_ar_two_stage
+    applicable_models: [deepseek-reasoner]
+    applicable_domains: [math, abstract_reasoning]
+    stage1_model_key: deepseek-reasoner
+    stage2_model_key: deepseek-chat
+    stage1_thinking_enabled: true
+    stage2_thinking_enabled: false
+    stage2_handoff_channels: [reasoning_content, visible_output]
+    stage2_prompt_assembly: reasoning_visible_trace
+    stage2_include_original_problems: false
+    budget_accounting: stage1_only_with_practical_stage2_cap
+    stage2_practical_cap: null
+    provenance_source: approved_protocol_metadata
+    status: release
+    notes: Reported budget is Stage 1; trace-only Stage 2 uses DeepSeek Chat and omits an explicit Stage 2 cap.
+  deepseek_v4_math_ar_two_stage:
+    profile_id: deepseek_v4_math_ar_two_stage
+    applicable_models: [deepseek-v4-pro]
+    applicable_domains: [math, abstract_reasoning]
+    stage1_model_key: deepseek-v4-pro
+    stage2_model_key: deepseek-v4-pro
+    stage1_thinking_enabled: true
+    stage2_thinking_enabled: false
+    stage2_handoff_channels: [reasoning_content, visible_output]
+    stage2_prompt_assembly: reasoning_visible_trace
+    stage2_include_original_problems: false
+    budget_accounting: stage1_only_with_practical_stage2_cap
+    stage2_practical_cap: null
+    provenance_source: approved_protocol_metadata
+    status: release
+    notes: Reported budget is Stage 1; trace-only Stage 2 reuses DeepSeek V4 Pro with thinking disabled and no explicit output cap.

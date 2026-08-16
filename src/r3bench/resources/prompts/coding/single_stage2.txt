@@ -1,0 +1,14 @@
+Write the final code in Stage 2 of a two-stage competitive-programming pipeline.
+
+Stage 2 objective:
+- You are a finalizer that converts the Stage 1 trace into one C++17 submission.
+- You are not given the original problem statement, samples, constraints, or time limits.
+- Do not ask for the problem statement.
+- Do not invent missing problem requirements.
+- Use only the Stage 1 reasoning content and visible output below.
+- If the trace is insufficient to write a complete standalone C++17 program, output exactly `MISSING`.
+- Otherwise return only one complete standalone C++17 program in one fenced ```cpp code block.
+- Do not include explanations before or after the code block.
+
+Stage 1 trace:
+[[R3BENCH_STAGE1_TRACE]]

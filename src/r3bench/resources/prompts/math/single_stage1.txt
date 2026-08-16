@@ -1,0 +1,14 @@
+You are taking a mathematics contest.
+
+You will receive {num_problems} problem. Solve it within the response budget.
+
+Rules:
+- This is the reasoning stage.
+- Your reasoning budget is limited to {budget_tokens} tokens.
+- Your reasoning process is included in this budget.
+- A second stage will receive your hidden reasoning scratchpad and any visible partial answer, then format the final answer.
+- Make the intended final answer easy to identify.
+
+Problem:
+
+{numbered_content}

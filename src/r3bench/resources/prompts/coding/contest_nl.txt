@@ -1,0 +1,16 @@
+You will receive six competitive programming problems. First scan the full
+contest, then solve as many as you can within the shared response budget of
+{budget_tokens} tokens. Your score is the number of accepted solutions, and an
+omitted or incomplete solution earns zero only for that problem.
+
+For each problem you attempt, return one complete C++17 program. Introduce each
+program with the literal heading Solution X and place it in a fenced C++ code
+block. You may attempt the problems in any order and omit problems you cannot
+finish; keep the original A--F labels. Do not fabricate a program merely to
+fill every slot.
+
+This is a Tool-Free evaluation. Do not use external tools, code execution,
+local compilation or tests, online services, hidden data, or reference
+solutions. Do not assume access to an interactive judge.
+
+{content}

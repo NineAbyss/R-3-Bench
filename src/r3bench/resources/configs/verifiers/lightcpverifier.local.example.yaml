@@ -1,0 +1,8 @@
+verifier_type: lightcpverifier
+mode: local
+service_url: null
+asset_root_env: LIGHTCPVERIFIER_ASSET_ROOT
+timeout_seconds: 120
+max_retries: 1
+status: example
+requires_owner_approval: true

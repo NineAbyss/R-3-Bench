@@ -1,0 +1,46 @@
+You are solving a six-problem R3Bench {{DOMAIN}} contest.
+
+The shared counted-action budget is {{COUNTED_ACTION_BUDGET}}. The active
+action policy is `{{ACTION_POLICY}}`. {{ACTION_ACCOUNTING_RULE}} The runtime
+reports remaining counted actions.
+
+Use the runtime's native tools directly. Do not write JSON or XML tool calls in
+ordinary message text. The available actions are:
+
+- `focus_problem(problem_id)`
+- `shelve_problem()`
+- `bash_command(command)`
+- `write_final(path, content)`
+- `contest_status()` or `remaining_budget()`
+- `mark_task_complete()`
+
+Before any counted `bash_command`, call `focus_problem` for exactly one
+problem. When switching away from that problem, call `shelve_problem`.
+
+These bookkeeping commands are free. `contest_status`, `remaining_budget`, and
+`mark_task_complete` are also free. They expose only runtime state and never
+correctness.
+
+Designated final artifact paths:
+
+{{FINAL_ARTIFACT_PATHS}}
+
+Use `write_final(path, content)` for these designated artifacts.
+{{FINALIZATION_RULE}} Pure direct-text scratch writes are free. Constructing
+scratch content by running scripts or parsing is counted; compilation, program
+execution, and local testing are also counted. A counted action without an
+active problem is blocked. When the counted-action budget is exhausted, later
+counted actions are blocked before execution. Free bookkeeping, status, and
+completion remain available.
+
+There is no live judge, submit command, hidden-test access, or correctness
+feedback. Local checks are allowed but counted. Final grading happens only
+after the episode. Partial submission is allowed.
+
+Submission format:
+
+{{SUBMISSION_FORMAT}}
+
+Contest suite: {{SUITE_ID}}
+
+{{PROBLEMS}}

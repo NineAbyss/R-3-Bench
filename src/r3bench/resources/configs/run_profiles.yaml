@@ -1,0 +1,141 @@
+schema_version: "1.0"
+status: release
+profiles:
+  qwen_coding:
+    profile_id: qwen_coding
+    provider_profile: qwen_shared_openai_compatible
+    applicable_models: [qwen3.7-max]
+    applicable_domains: [coding]
+    applicable_settings: [tool_free, agentic]
+    timeout_seconds: 3600
+    max_retries: 2
+    retry_backoff_seconds: 15.0
+    retry_backoff_mode: fixed
+    streaming: false
+    request_safety_limits:
+      require_explicit_cli_limit: true
+    provenance_source: release_validated_qwen_coding_transport
+    status: release
+    requires_owner_approval: false
+    notes: Shared bounded Qwen Coding transport.
+  qwen_math_ar:
+    profile_id: qwen_math_ar
+    provider_profile: qwen_shared_openai_compatible
+    applicable_models: [qwen3.7-max]
+    applicable_domains: [math, abstract_reasoning]
+    applicable_settings: [tool_free, agentic]
+    timeout_seconds: 7200
+    max_retries: 5
+    retry_backoff_seconds: 2.0
+    retry_backoff_mode: exponential
+    streaming: false
+    request_safety_limits:
+      require_explicit_cli_limit: true
+    provenance_source: release_validated_qwen_math_ar_transport
+    status: release
+    requires_owner_approval: false
+    notes: Shared bounded Qwen Math and Abstract Reasoning transport.
+  deepseek_coding:
+    profile_id: deepseek_coding
+    provider_profile: deepseek_openai_compatible
+    applicable_models: [deepseek-chat, deepseek-reasoner, deepseek-v4-pro]
+    applicable_domains: [coding]
+    applicable_settings: [tool_free, agentic]
+    timeout_seconds: 1800
+    max_retries: 2
+    retry_backoff_seconds: 15.0
+    retry_backoff_mode: fixed
+    streaming: false
+    request_safety_limits:
+      require_explicit_cli_limit: true
+    provenance_source: release_validated_deepseek_coding_transport
+    status: release
+    requires_owner_approval: false
+    notes: Shared bounded DeepSeek Coding transport.
+  deepseek_math_ar:
+    profile_id: deepseek_math_ar
+    provider_profile: deepseek_openai_compatible
+    applicable_models: [deepseek-chat, deepseek-reasoner, deepseek-v4-pro]
+    applicable_domains: [math, abstract_reasoning]
+    applicable_settings: [tool_free, agentic]
+    timeout_seconds: 7200
+    max_retries: 5
+    retry_backoff_seconds: 2.0
+    retry_backoff_mode: exponential
+    streaming: false
+    request_safety_limits:
+      require_explicit_cli_limit: true
+    provenance_source: release_validated_deepseek_math_ar_transport
+    status: release
+    requires_owner_approval: false
+    notes: Shared bounded DeepSeek Math and Abstract Reasoning transport.
+  deepseek_math_judge_single:
+    profile_id: deepseek_math_judge_single
+    provider_profile: deepseek_openai_compatible
+    applicable_models: [deepseek-v4-flash]
+    applicable_domains: [math]
+    applicable_settings: [tool_free]
+    timeout_seconds: 900
+    max_retries: 5
+    retry_backoff_seconds: 2.0
+    retry_backoff_mode: exponential
+    streaming: false
+    request_safety_limits:
+      scoring_only: true
+      generation_disabled: true
+    provenance_source: release_validated_math_judge_single_transport
+    status: release
+    requires_owner_approval: false
+    notes: Saved-output Math scoring-only DeepSeek V4 Flash transport.
+  deepseek_math_judge_contest:
+    profile_id: deepseek_math_judge_contest
+    provider_profile: deepseek_openai_compatible
+    applicable_models: [deepseek-v4-flash]
+    applicable_domains: [math]
+    applicable_settings: [tool_free]
+    timeout_seconds: 1200
+    max_retries: 5
+    retry_backoff_seconds: 2.0
+    retry_backoff_mode: exponential
+    streaming: false
+    request_safety_limits:
+      scoring_only: true
+      generation_disabled: true
+    provenance_source: release_validated_math_judge_contest_transport
+    status: release
+    requires_owner_approval: false
+    notes: Saved-output Math contest scoring-only DeepSeek V4 Flash transport.
+  mock_default:
+    profile_id: mock_default
+    provider_profile: mock
+    applicable_models: [mock]
+    applicable_domains: [coding, math, abstract_reasoning]
+    applicable_settings: [tool_free, agentic]
+    timeout_seconds: 1
+    max_retries: 0
+    retry_backoff_seconds: 0.0
+    retry_backoff_mode: none
+    streaming: false
+    request_safety_limits:
+      offline_only: true
+    provenance_source: public_offline_mock_runtime
+    status: release
+    requires_owner_approval: false
+    notes: Network-free mock execution.
+  replay_default:
+    profile_id: replay_default
+    provider_profile: replay
+    applicable_models: [replay]
+    applicable_domains: [coding, math, abstract_reasoning]
+    applicable_settings: [tool_free, agentic]
+    timeout_seconds: 1
+    max_retries: 0
+    retry_backoff_seconds: 0.0
+    retry_backoff_mode: none
+    streaming: false
+    request_safety_limits:
+      offline_only: true
+    provenance_source: public_offline_replay_runtime
+    status: release
+    requires_owner_approval: false
+    notes: Network-free replay execution.

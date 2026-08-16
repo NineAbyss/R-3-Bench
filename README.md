@@ -1,3 +1,21 @@
+<h1 align="center">R<sup>3</sup>-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets</h1>
+
+<p align="center">
+  <a href="https://huggingface.co/datasets/R-3-Bench/R-3-Bench"><img src="https://img.shields.io/badge/Dataset-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor" alt="Dataset"></a>
+  <a href="https://github.com/NineAbyss/R-3-Bench"><img src="https://img.shields.io/badge/Code-000000?style=for-the-badge&logo=github&logoColor=white" alt="Code"></a>
+</p>
+
+This is the official implementation of the following paper:
+
+> **R<sup>3</sup>-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets**
+
+<p align="center"><img width="90%" src="figs/R3_BENCH_framework.png" /></p>
+<p align="center"><em>The overview of R<sup>3</sup>-Bench.</em></p>
+
+<p align="center"><img width="90%" src="figs/main_res.png" /></p>
+<p align="center"><em>The main result of R<sup>3</sup>-Bench.</em></p>
+
+
 # R3Bench evaluator
 
 R3Bench measures how a model allocates a shared resource across six problems.
@@ -108,4 +126,3 @@ LightCPVerifier assets are not included and are never started by the evaluator.
 - [Data and scoring](docs/DATA_AND_SCORING.md)
 - [Response curves and Oracle](docs/RESPONSE_CURVE_AND_ORACLE.md)
 - [Reproduction scope](docs/REPRODUCTION_SCOPE.md)
-# R-3-Bench

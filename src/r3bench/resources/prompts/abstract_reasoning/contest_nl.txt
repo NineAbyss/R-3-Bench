@@ -1,0 +1,30 @@
+You are taking a general reasoning contest.
+
+You will receive {num_problems} problems. Solve as many as you can within the
+shared response budget.
+
+Rules:
+- Your total output budget for all problems is limited to {budget_tokens} tokens.
+- Your reasoning process is included in this budget.
+- Your score is the number of problems you answer correctly.
+- Solve using natural-language reasoning only. Do not use external tools,
+  execute programs, access a live judge or hidden data, or consult reference
+  solutions.
+- First scan all problems, then choose the ones you expect to solve most
+  reliably with the fewest tokens.
+- You may solve and submit any subset of the problems, in any order.
+- Do not fabricate an answer merely to fill every problem slot.
+- A missing, malformed, or truncated answer earns 0 only for that problem.
+- Keep each attempted problem's original number in a heading such as
+  "## Problem 4".
+- Put every attempted final answer in <answer>...</answer>.
+
+Required structure for each attempted problem:
+
+## Problem 1
+[brief solution]
+Final Answer: <answer>...</answer>
+
+Problems:
+
+{numbered_content}

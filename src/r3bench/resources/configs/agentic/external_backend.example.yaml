@@ -1,0 +1,28 @@
+schema_version: "2.0"
+status: not_configured
+protocol_version: "2.0"
+backend: harbor_terminus2
+executable: null
+harbor_executable: harbor
+docker_executable: docker
+credential_env: null
+timeout_seconds: 7200
+trajectory_format: ATIF
+domain_sandbox_limits:
+  coding:
+    agent_timeout_seconds: 7200
+    build_timeout_seconds: 600
+    memory_mb: 2048
+    storage_mb: 10240
+  math:
+    agent_timeout_seconds: 7200
+    verifier_timeout_seconds: 7200
+    cpu_count: 1
+    memory_mb: 2048
+    storage_mb: 10240
+  abstract_reasoning:
+    agent_timeout_seconds: 7200
+    verifier_timeout_seconds: 7200
+    cpu_count: 1
+    memory_mb: 2048
+    storage_mb: 10240

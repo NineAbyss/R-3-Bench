@@ -1,0 +1,3 @@
+{content}
+
+Your total output budget for this problem is limited to {budget_tokens} tokens. Keep the reasoning concise enough to leave room for the final <answer>...</answer> tag.

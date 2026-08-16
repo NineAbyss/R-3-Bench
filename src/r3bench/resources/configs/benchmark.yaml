@@ -1,0 +1,717 @@
+schema_version: '1.0'
+status: release_reference
+reference_models:
+- deepseek-chat
+- deepseek-reasoner
+- deepseek-v4-pro
+- qwen3.7-max
+domains:
+- coding
+- math
+- abstract_reasoning
+settings:
+- tool_free
+- agentic
+roles:
+- unbudgeted_baseline
+- budgeted_rho_0p2
+- budgeted_rho_0p8
+- single_problem_response_curve
+reference_cell_count: 96
+model_bindings:
+  deepseek-chat:
+    evaluator_profile: deepseek_shared
+    provider_profile: deepseek_openai_compatible
+    run_profiles:
+      coding: deepseek_coding
+      math: deepseek_math_ar
+      abstract_reasoning: deepseek_math_ar
+  deepseek-reasoner:
+    evaluator_profile: deepseek_shared
+    provider_profile: deepseek_openai_compatible
+    run_profiles:
+      coding: deepseek_coding
+      math: deepseek_math_ar
+      abstract_reasoning: deepseek_math_ar
+  deepseek-v4-pro:
+    evaluator_profile: deepseek_shared
+    provider_profile: deepseek_openai_compatible
+    run_profiles:
+      coding: deepseek_coding
+      math: deepseek_math_ar
+      abstract_reasoning: deepseek_math_ar
+  qwen3.7-max:
+    evaluator_profile: qwen_shared
+    provider_profile: qwen_shared_openai_compatible
+    run_profiles:
+      coding: qwen_coding
+      math: qwen_math_ar
+      abstract_reasoning: qwen_math_ar
+scorer_bindings:
+  coding: coding_lightcpverifier_external
+  math: math_equivalence_judge
+  abstract_reasoning: abstract_reasoning_reasoning_gym
+prompt_bindings:
+  tool_free:
+    coding:
+      one_stage: prompts/coding/contest_nl.txt
+      stage1: prompts/coding/contest_stage1.txt
+      stage2: prompts/coding/contest_stage2.txt
+    math:
+      one_stage: prompts/math/contest_nl.txt
+      stage1: prompts/math/contest_stage1.txt
+      stage2: prompts/math/contest_stage2.txt
+    abstract_reasoning:
+      one_stage: prompts/abstract_reasoning/contest_nl.txt
+      stage1: prompts/abstract_reasoning/contest_stage1.txt
+      stage2: prompts/abstract_reasoning/contest_stage2.txt
+  agentic:
+    task: prompts/agentic/contest_native_tool.txt
+    backend_profile: external_agentic_v1
+budgets:
+  tool_free:
+    deepseek-chat:
+      math:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 384000
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 3862
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 15448
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 966
+          - 1931
+          - 3862
+          - 7724
+          - 15448
+          protocol: one_stage
+      coding:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 393216
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 1266
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 5065
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 317
+          - 633
+          - 1266
+          - 2532
+          - 5065
+          protocol: one_stage
+      abstract_reasoning:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 384000
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 5100
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 20400
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 1275
+          - 2550
+          - 5100
+          - 10200
+          - 20400
+          protocol: one_stage
+    deepseek-reasoner:
+      math:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 134600
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 15678
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 62710
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 3919
+          - 7839
+          - 15678
+          - 31355
+          - 62710
+          protocol: two_stage
+      coding:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 131072
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 8466
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 33864
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 2116
+          - 4233
+          - 8466
+          - 16932
+          - 33864
+          protocol: two_stage
+      abstract_reasoning:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 64000
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 9058
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 36231
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 2264
+          - 4529
+          - 9058
+          - 18116
+          - 36231
+          protocol: two_stage
+    deepseek-v4-pro:
+      math:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 139100
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 19161
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 76642
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 4790
+          - 9580
+          - 19161
+          - 38321
+          - 76642
+          protocol: two_stage
+      coding:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 131072
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 16800
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 67200
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 4200
+          - 8400
+          - 16800
+          - 33600
+          - 67200
+          protocol: two_stage
+      abstract_reasoning:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 139100
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 15500
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 62000
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 3875
+          - 7750
+          - 15500
+          - 31000
+          - 62000
+          protocol: two_stage
+    qwen3.7-max:
+      math:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 65536
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 8317
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 33265
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 2079
+          - 4158
+          - 8317
+          - 16632
+          - 33265
+          protocol: two_stage
+      coding:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 131072
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 25500
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 101989
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 6374
+          - 12749
+          - 25500
+          - 50994
+          - 101989
+          protocol: two_stage
+      abstract_reasoning:
+        unbudgeted_baseline:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: 65536
+        budgeted_rho_0p2:
+          resource_policy: output_tokens
+          rho: 0.2
+          output_tokens: 9303
+          provider_safety_cap: null
+        budgeted_rho_0p8:
+          resource_policy: output_tokens
+          rho: 0.8
+          output_tokens: 37212
+          provider_safety_cap: null
+        single_problem_response_curve:
+          resource_policy: output_tokens
+          rho: null
+          output_tokens: null
+          provider_safety_cap: null
+          grid:
+          - 0
+          - 2326
+          - 4652
+          - 9303
+          - 18606
+          - 37212
+          protocol: two_stage
+  agentic:
+    deepseek-chat:
+      math:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 6
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 23
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 1
+          - 3
+          - 6
+          - 12
+          - 23
+      coding:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 10
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 40
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 2
+          - 5
+          - 10
+          - 20
+          - 40
+      abstract_reasoning:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 2
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 10
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 1
+          - 1
+          - 2
+          - 5
+          - 10
+    deepseek-reasoner:
+      math:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 8
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 32
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 2
+          - 4
+          - 8
+          - 16
+          - 32
+      coding:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 11
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 46
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 3
+          - 6
+          - 11
+          - 23
+          - 46
+      abstract_reasoning:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 6
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 24
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 2
+          - 3
+          - 6
+          - 12
+          - 24
+    deepseek-v4-pro:
+      math:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 2
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 8
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 1
+          - 1
+          - 2
+          - 4
+          - 8
+      coding:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 7
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 28
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 2
+          - 4
+          - 7
+          - 14
+          - 28
+      abstract_reasoning:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 2
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 7
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 1
+          - 1
+          - 2
+          - 4
+          - 7
+    qwen3.7-max:
+      math:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 2
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 10
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 1
+          - 1
+          - 2
+          - 5
+          - 10
+      coding:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 3
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 12
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 6
+          - 12
+      abstract_reasoning:
+        budgeted_rho_0p2:
+          resource_policy: compute_tools
+          rho: 0.2
+          counted_actions: 2
+        budgeted_rho_0p8:
+          resource_policy: compute_tools
+          rho: 0.8
+          counted_actions: 8
+        unbudgeted_baseline:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+        single_problem_response_curve:
+          resource_policy: compute_tools
+          rho: null
+          counted_actions: null
+          grid:
+          - 0
+          - 1
+          - 1
+          - 2
+          - 4
+          - 8

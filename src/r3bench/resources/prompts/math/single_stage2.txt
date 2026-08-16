@@ -1,0 +1,15 @@
+Stopped reasoning scratchpad:
+[[R3BENCH_STAGE1_REASONING]]
+
+Visible partial answer:
+[[R3BENCH_STAGE1_VISIBLE_OUTPUT]]
+
+Use only the stopped scratchpad and partial answer to output the final answer.
+Do not include explanations, solve from scratch, or add reasoning, commentary,
+notes, or scratch work. If the trace does not contain a usable answer, output
+Final Answer: \boxed{{No answer}}.
+
+Required format:
+
+## Problem 1
+Final Answer: \boxed{{...}}

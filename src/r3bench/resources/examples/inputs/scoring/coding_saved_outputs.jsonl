@@ -1,0 +1,1 @@
+{"domain":"coding","problem_id":"toy-code-1","data_source":"examples/data/coding.jsonl","synthetic":true,"prediction":"```cpp\n#include <iostream>\nint main() { std::cout << 1 << '\\n'; }\n```"}

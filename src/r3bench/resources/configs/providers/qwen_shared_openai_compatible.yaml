@@ -1,0 +1,15 @@
+adapter: openai_compatible
+provider_name: qwen_shared_openai_compatible
+base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+api_key_env: QWEN_API_KEY
+token_budget_field: max_completion_tokens
+transport_defaults:
+  timeout_seconds: 3600
+  max_retries: 2
+  retry_backoff_seconds: 15.0
+  retry_backoff_mode: fixed
+  streaming: false
+  request_safety_limits:
+    require_explicit_cli_limit: true
+default_headers: {}
+extra_body: {}

@@ -1,0 +1,6 @@
+{content}
+
+Please put your final answer in \boxed{{}}.
+
+Your total output budget for this problem is limited to {budget_tokens} tokens.
+Keep the reasoning concise enough to fit within this budget.

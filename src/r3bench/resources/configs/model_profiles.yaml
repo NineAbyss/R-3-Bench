@@ -1,0 +1,60 @@
+schema_version: "1.0"
+profile_schema_version: "1.0"
+status: release
+models:
+  qwen3.7-max:
+    model_key: qwen3.7-max
+    display_name: Qwen3.7-Max
+    evaluator_profile: qwen_shared
+    provider_profile: qwen_shared_openai_compatible
+    public_model_id: qwen3.7-max
+    api_key_env: QWEN_API_KEY
+    thinking_enabled: true
+    reasoning_effort: high
+    temperature: 0.2
+    top_p: 0.8
+    notes: Stage-specific profiles may disable thinking for extraction/finalization.
+    status: release
+    requires_owner_approval: false
+  deepseek-chat:
+    model_key: deepseek-chat
+    display_name: DeepSeek-Chat
+    evaluator_profile: deepseek_shared
+    provider_profile: deepseek_openai_compatible
+    public_model_id: deepseek-chat
+    api_key_env: DEEPSEEK_API_KEY
+    thinking_enabled: false
+    reasoning_effort: null
+    temperature: 0.0
+    top_p: 1.0
+    notes: Shared non-reasoning DeepSeek chat profile; reasoning_effort is omitted from requests.
+    status: release
+    requires_owner_approval: false
+  deepseek-reasoner:
+    model_key: deepseek-reasoner
+    display_name: DeepSeek-Reasoner
+    evaluator_profile: deepseek_shared
+    provider_profile: deepseek_openai_compatible
+    public_model_id: deepseek-reasoner
+    api_key_env: DEEPSEEK_API_KEY
+    thinking_enabled: true
+    reasoning_effort: high
+    temperature: null
+    top_p: null
+    notes: Sampling fields are omitted for the reasoning endpoint.
+    status: release
+    requires_owner_approval: false
+  deepseek-v4-pro:
+    model_key: deepseek-v4-pro
+    display_name: DeepSeek-V4-Pro
+    evaluator_profile: deepseek_shared
+    provider_profile: deepseek_openai_compatible
+    public_model_id: deepseek-v4-pro
+    api_key_env: DEEPSEEK_API_KEY
+    thinking_enabled: true
+    reasoning_effort: high
+    temperature: null
+    top_p: null
+    notes: Uses the shared DeepSeek-compatible transport.
+    status: release
+    requires_owner_approval: false

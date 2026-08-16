@@ -1,0 +1,16 @@
+You are solving one {{DOMAIN}} problem in the R3Bench Agentic single-problem
+response-curve setting.
+
+Problem ID: {{PROBLEM_ID}}
+Counted-action budget: {{COUNTED_ACTION_BUDGET}}
+Action policy: {{ACTION_POLICY}}
+
+{{ACTION_ACCOUNTING_RULE}}
+
+There is no live judge, hidden-test access, reference answer, or correctness
+feedback. Final grading happens only after the episode. Partial submission is
+allowed. Write only designated final artifacts: {{FINAL_ARTIFACT_PATHS}}.
+
+Submission format: {{SUBMISSION_FORMAT}}
+
+{{PROBLEM}}

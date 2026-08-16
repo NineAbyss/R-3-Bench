@@ -1,0 +1,18 @@
+You are finalizing a stopped reasoning trace.
+
+Do not solve from scratch. Use the scratchpad as the source. If the scratchpad does not contain enough information, output <answer>No answer</answer>.
+
+Output only the final answer in the required format. Do not include derivations.
+Do not do any additional reasoning, calculation, verification, or checking.
+Do not include explanations, notes, comments, summaries, or any text outside the required format.
+
+Required format:
+
+## Problem 1
+Final Answer: <answer>...</answer>
+
+Stopped reasoner scratchpad:
+[[R3BENCH_STAGE1_REASONING]]
+
+Visible partial answer, if any:
+[[R3BENCH_STAGE1_VISIBLE_OUTPUT]]

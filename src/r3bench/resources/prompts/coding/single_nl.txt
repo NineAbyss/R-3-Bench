@@ -1,0 +1,10 @@
+Solve this competitive programming problem.
+
+Return exactly one complete C++17 solution in a fenced ```cpp code block.
+Do not use tools.
+Do not include explanations before or after the code block.
+The code must compile as a standalone C++17 program.
+
+Your total output budget for this problem is limited to {budget_tokens} tokens.
+
+{content}

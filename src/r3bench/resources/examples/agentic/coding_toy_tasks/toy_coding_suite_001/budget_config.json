@@ -1,0 +1,18 @@
+{
+  "schema_version": "2.0",
+  "resource_type": "counted_actions",
+  "policy": "compute_tools",
+  "budget_mode": "counted_cap",
+  "counted_action_budget": 3,
+  "counted_action_unit_cost": 1,
+  "blocked_attempts_consume_executed_budget": false,
+  "free_categories": [
+    "bookkeeping",
+    "status",
+    "environment",
+    "pure_file_write",
+    "final_artifact_write",
+    "task_completion"
+  ],
+  "final_artifact_write_counted": false
+}

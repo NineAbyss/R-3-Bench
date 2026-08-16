@@ -1,0 +1,79 @@
+schema_version: "2.0"
+status: release
+profiles:
+  harbor_terminus2_paper_v1:
+    backend: harbor
+    environment: docker
+    agent: terminus-2
+    execution_enabled: true
+    paper_equivalent_runtime: true
+    adapter_protocol_version: "2.0"
+    local_config_template: configs/agentic/external_backend.example.yaml
+    action_policy_by_domain:
+      coding: compute_tools
+      math: compute_tools
+      abstract_reasoning: compute_tools
+    pure_file_writes_free: true
+    final_artifact_writes_free: true
+    starts_external_process: true
+    calls_model_api: true
+    os_command_execution_available: true
+    supports_compilation_and_tests: true
+    exposes_judge_feedback: false
+    writes_complete_trajectory: true
+    trajectory_format: ATIF
+    trajectory_file: trajectory.json
+    domain_sandbox_limits:
+      coding:
+        agent_timeout_seconds: 7200
+        build_timeout_seconds: 600
+        memory_mb: 2048
+        storage_mb: 10240
+      math:
+        agent_timeout_seconds: 7200
+        verifier_timeout_seconds: 7200
+        cpu_count: 1
+        memory_mb: 2048
+        storage_mb: 10240
+      abstract_reasoning:
+        agent_timeout_seconds: 7200
+        verifier_timeout_seconds: 7200
+        cpu_count: 1
+        memory_mb: 2048
+        storage_mb: 10240
+    status: release
+  external_agentic_v1:
+    alias_for: harbor_terminus2_paper_v1
+    backend: harbor
+    environment: docker
+    agent: terminus-2
+    paper_equivalent_runtime: true
+    execution_enabled_by_default: false
+    local_config_template: configs/agentic/external_backend.example.yaml
+    protocol_version: "2.0"
+    generation_only: true
+    verifier_disabled_during_episode: true
+    starts_external_process: true
+    requires_owner_runtime_binding: true
+    writes_complete_trajectory: true
+    trajectory_format: ATIF
+    status: release
+  offline_mock_replay_v1:
+    backend: offline_state_machine
+    execution_enabled: true
+    provider_modes:
+      - mock
+      - replay
+    paper_equivalent_runtime: false
+    action_policy_by_domain:
+      coding: compute_tools
+      math: compute_tools
+      abstract_reasoning: compute_tools
+    starts_external_process: false
+    calls_model_api: false
+    os_command_execution_available: false
+    supports_compilation_and_tests: false
+    exposes_judge_feedback: false
+    writes_complete_trajectory: false
+    intended_use: deterministic_tests_only
+    status: release

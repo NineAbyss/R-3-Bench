@@ -1,0 +1,44 @@
+{
+  "schema_version": "2.0",
+  "domain": "coding",
+  "suite_id": "toy_coding_suite_001",
+  "problems": [
+    {
+      "problem_id": "toy-code-1",
+      "problem_label": "A",
+      "position": 1,
+      "problem_statement": "Toy coding problem 1. Return the integer 1."
+    },
+    {
+      "problem_id": "toy-code-2",
+      "problem_label": "B",
+      "position": 2,
+      "problem_statement": "Toy coding problem 2. Return the integer 2."
+    },
+    {
+      "problem_id": "toy-code-3",
+      "problem_label": "C",
+      "position": 3,
+      "problem_statement": "Toy coding problem 3. Return the integer 3."
+    },
+    {
+      "problem_id": "toy-code-4",
+      "problem_label": "D",
+      "position": 4,
+      "problem_statement": "Toy coding problem 4. Return the integer 4."
+    },
+    {
+      "problem_id": "toy-code-5",
+      "problem_label": "E",
+      "position": 5,
+      "problem_statement": "Toy coding problem 5. Return the integer 5."
+    },
+    {
+      "problem_id": "toy-code-6",
+      "problem_label": "F",
+      "position": 6,
+      "problem_statement": "Toy coding problem 6. Return the integer 6."
+    }
+  ],
+  "difficulty_labels_exposed": false
+}

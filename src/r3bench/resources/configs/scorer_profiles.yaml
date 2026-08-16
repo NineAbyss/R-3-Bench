@@ -1,0 +1,46 @@
+schema_version: "1.0"
+status: release
+profiles:
+  coding_lightcpverifier_external:
+    profile_id: coding_lightcpverifier_external
+    domain: coding
+    scorer_type: external_verifier
+    verifier: LightCPVerifier
+    asset_lookup: upstream_id
+    requires_external_assets: true
+    hidden_tests_in_public_dataset: false
+    binding: lightcp_http_v1
+    status: release
+    requires_owner_approval: false
+    notes: Service location and hidden assets are runtime-only.
+  math_equivalence_judge:
+    profile_id: math_equivalence_judge
+    domain: math
+    scorer_type: model_equivalence_judge
+    judge_prompt: prompts/math/omnimath_equivalence_judge.txt
+    judge_prompt_sha256: 5ed0f8cac1070c737589c30a4af062ec4ebd8c6e8da155247c619d1b471c5b80
+    judge_model: deepseek-v4-flash
+    provider_profile: deepseek_openai_compatible
+    single_run_profile: deepseek_math_judge_single
+    contest_run_profile: deepseek_math_judge_contest
+    api_key_env: DEEPSEEK_API_KEY
+    response_format: omnimath_markdown
+    max_tokens: 16384
+    temperature: 0
+    top_p: 1
+    status: release
+    requires_owner_approval: false
+    notes: DeepSeek V4 Flash judging remains explicit, scoring-only, and opt-in.
+  abstract_reasoning_reasoning_gym:
+    profile_id: abstract_reasoning_reasoning_gym
+    domain: abstract_reasoning
+    scorer_type: reasoning_gym
+    reasoning_gym_version: 0.1.25
+    reasoning_gym_revision: 21e6d2a9a581b3e11aafe711abfd37402f8482d5
+    module_name: reasoning_gym
+    generator_aware: true
+    universal_exact_match: false
+    bridge: create_dataset_score_answer
+    status: release
+    requires_owner_approval: false
+    notes: Reasoning Gym remains an optional scoring dependency.

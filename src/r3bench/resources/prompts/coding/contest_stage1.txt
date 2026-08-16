@@ -1,0 +1,49 @@
+You are solving a six-problem competitive-programming contest in a no-tool,
+single-response setting.
+
+This is Stage 1, the contest-solving stage. You have a shared Stage-1 output
+budget of approximately {budget_tokens} tokens before the finalizer stage.
+Allocate this budget across Problems A-F to maximize the number of accepted
+solutions.
+
+Stage 2 will receive only your stopped reasoning trace and visible output, not
+the original problem statements, then format trace-supported programs without solving from scratch.
+
+Goal:
+- Maximize the number of accepted solutions across Problems A-F.
+- Prefer complete candidate programs over long explanations.
+- When the budget is tight, solve fewer problems completely rather than many
+  problems partially.
+- For any problem you choose to solve, try to emit a complete Candidate Code
+  block as soon as you have a coherent solution.
+- If you cannot produce a complete standalone C++17 program for a problem,
+  mark it as UNSOLVED.
+- You may attempt any subset of the problems. Solving all problems is not
+  required, and an unattempted problem receives zero credit.
+- Do not fabricate a candidate program merely to fill every problem slot.
+
+Rules:
+- This is Tool-Free. Do not use external tools, code execution, local tests, a
+  live judge, hidden data, reference solutions, online search, or external
+  feedback.
+- You may solve the problems in any order, but organize final visible sections
+  in A-F order when possible.
+- For each problem, use a section header exactly like: ## Problem A
+- Under each section, write either `Status: SOLVED` or `Status: UNSOLVED`.
+- If you have a complete candidate solution, include exactly one final
+  candidate code block under `Candidate Code:`.
+- Candidate code must be a complete standalone C++17 program.
+- Do not put draft code or pseudocode in fenced ```cpp blocks.
+- Do not invent random code when you have no coherent solution.
+
+Recommended section shape:
+
+## Problem A
+Status: SOLVED or UNSOLVED
+Candidate Code:
+```cpp
+// complete standalone C++17 program if solved
+```
+Notes: <brief implementation notes if useful>
+
+{content}

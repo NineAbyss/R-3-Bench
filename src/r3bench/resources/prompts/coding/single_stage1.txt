@@ -1,0 +1,7 @@
+Solve the competitive programming problem below within a Stage 1 output budget
+of approximately {budget_tokens} tokens.
+Identify the algorithm, key edge cases, complexity, and implementation details.
+Include a complete C++17 candidate program once the solution is available; do
+not defer code generation to Stage 2.
+
+{content}

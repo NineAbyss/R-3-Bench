@@ -1,0 +1,24 @@
+Stopped reasoning scratchpad:
+[[R3BENCH_STAGE1_REASONING]]
+
+Visible partial answer:
+[[R3BENCH_STAGE1_VISIBLE_OUTPUT]]
+
+Your score is the number of problems answered correctly. Use only the stopped
+scratchpad and partial answer to output as many correct final answers as
+possible.
+
+Output exactly one section for each problem. Do not include explanations, solve
+from scratch, or add reasoning, commentary, notes, or scratch work. If the
+trace does not contain a usable answer for a problem, output
+Final Answer: \boxed{{No answer}} for that problem.
+
+Required format:
+
+## Problem 1
+Final Answer: \boxed{{...}}
+
+## Problem 2
+Final Answer: \boxed{{...}}
+
+Continue the same structure through Problem {num_problems}.

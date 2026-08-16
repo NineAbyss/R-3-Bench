@@ -1,0 +1,58 @@
+# R3-Bench Coding Contest {{SUITE_ID}}
+
+You are in a six-problem competitive-programming contest.
+Solve as many of the six competitive-programming problems as possible.
+Final score is determined only after the episode.
+
+## Official Evaluation Protocol
+
+- There is no live judge or correctness feedback during solving.
+- Do not submit to or query an external judge.
+- Write complete C++17 solutions to these files:
+
+- Problem A: `/app/solution_A.cpp`
+- Problem B: `/app/solution_B.cpp`
+- Problem C: `/app/solution_C.cpp`
+- Problem D: `/app/solution_D.cpp`
+- Problem E: `/app/solution_E.cpp`
+- Problem F: `/app/solution_F.cpp`
+
+Each file is judged independently. Leave a file absent only if you choose not
+to attempt that problem.
+
+## Problem-Scoped Tool Rule
+
+- Send terminal commands through the runtime's native `bash_command` tool.
+- Before a counted terminal command, first send `focus_problem <A-F>` as a
+  separate `bash_command` call.
+- `focus_problem`, `shelve_problem`, and `contest_status` are free bookkeeping.
+- A counted command may serve only the currently focused problem.
+- Use `/logs/problem_A/` through `/logs/problem_F/` for per-problem scratch
+  files.
+- Do not solve, write, compile, test, or inspect multiple problems in one
+  command.
+- Use `mark_task_complete` after writing all available solution files.
+
+## Action Accounting
+
+The shared counted-action budget is {{COUNTED_ACTION_BUDGET}} under policy
+`{{ACTION_POLICY}}`. {{ACTION_ACCOUNTING_RULE}}
+
+{{FINALIZATION_RULE}}
+
+Blocked commands do not consume the executed counted-action budget. When the
+budget is exhausted, later counted commands are blocked and final grading uses
+the files already present. Free bookkeeping and task completion remain
+available.
+
+## Protocol Checklist
+
+1. Focus exactly one problem before a counted command.
+2. Keep each counted command scoped to that problem.
+3. Write a complete solution file when ready.
+4. Use `contest_status` only for sanitized runtime state.
+5. Finish with `mark_task_complete`.
+
+## Problems
+
+{{PROBLEMS}}

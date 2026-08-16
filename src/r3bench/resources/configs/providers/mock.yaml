@@ -1,0 +1,14 @@
+adapter: mock
+provider_name: mock
+base_url: null
+api_key_env: null
+transport_defaults:
+  timeout_seconds: 1
+  max_retries: 0
+  retry_backoff_seconds: 0.0
+  retry_backoff_mode: none
+  streaming: false
+  request_safety_limits:
+    offline_only: true
+default_headers: {}
+extra_body: {}

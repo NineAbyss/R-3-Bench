@@ -1,0 +1,33 @@
+schema_version: "1.0"
+evaluator_interface_version: "1.0"
+profile_schema_version: "1.0"
+status: release
+profiles:
+  qwen_shared:
+    description: Shared evaluator contract for Qwen-compatible model profiles.
+    runner: shared_tool_free_runner
+    prompt_renderer: shared_prompt_renderer
+    one_stage_orchestration: shared
+    two_stage_orchestration: shared
+    parser_dispatch: shared_domain_dispatch
+    result_schema: standard_v1
+    supports_domains: [coding, math, abstract_reasoning]
+    supports_modes: [single_problem, contest]
+    supports_settings: [tool_free, agentic]
+    notes:
+      - Model differences are configuration-only.
+      - Provider transport is separate from the evaluator contract.
+  deepseek_shared:
+    description: Shared evaluator contract with approved DeepSeek protocol overrides.
+    runner: shared_tool_free_runner
+    prompt_renderer: shared_prompt_renderer
+    one_stage_orchestration: shared
+    two_stage_orchestration: shared_with_deepseek_overrides
+    parser_dispatch: shared_domain_dispatch
+    result_schema: standard_v1
+    supports_domains: [coding, math, abstract_reasoning]
+    supports_modes: [single_problem, contest]
+    supports_settings: [tool_free, agentic]
+    notes:
+      - Overrides may affect payload fields and stage handoff only.
+      - DeepSeek models do not receive separate loaders, parsers, writers, or Oracle code.

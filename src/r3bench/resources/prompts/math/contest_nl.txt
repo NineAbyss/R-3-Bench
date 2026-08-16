@@ -1,0 +1,38 @@
+You are taking a mathematics contest.
+
+You will receive {num_problems} problems. Solve as many as you can within the
+response budget.
+
+Rules:
+- Your total output budget for all problems is limited to {budget_tokens} tokens.
+- Your reasoning process is included in this budget.
+- Your score is the number of problems you answer correctly.
+- Solve using natural-language reasoning only. Do not use external tools,
+  execute programs, access a live judge or hidden data, or consult reference
+  solutions.
+- A missing, malformed, or truncated final answer earns 0 only for that problem.
+- You do not need to solve the problems in the presented order.
+- First scan all problems, then choose the problems you expect to solve most
+  reliably with the fewest tokens.
+- Response sections may appear out of order, but each must keep the original
+  problem number, such as "## Problem 4".
+- If the budget is tight, prefer concise final answers for more problems over
+  long solutions for fewer problems.
+- You may submit any subset of the problems. If you cannot solve a problem,
+  omit its section; do not fabricate or box a placeholder answer.
+- For every problem you attempt, put the final answer in \boxed{{}}.
+- Use exactly this output structure so the answers can be graded:
+
+## Problem 1
+[brief solution]
+Final Answer: \boxed{{...}}
+
+## Problem 2
+[brief solution]
+Final Answer: \boxed{{...}}
+
+Continue the same structure through Problem {num_problems}.
+
+Problems:
+
+{numbered_content}

@@ -1,0 +1,33 @@
+You are taking a mathematics contest.
+
+You will receive {num_problems} problems. Solve as many as you can within the
+response budget.
+
+Rules:
+- This is the reasoning stage.
+- Your shared reasoning budget for all problems is limited to {budget_tokens}
+  tokens.
+- Your reasoning process is included in this budget.
+- Stage 2 will receive only your stopped reasoning scratchpad and visible
+  partial answer, not the original problem statements, then format final
+  answers without solving from scratch.
+- This is Tool-Free. Do not use external tools, code execution, local tests, a
+  live judge, hidden data, or reference solutions.
+- Your score is the number of problems answered correctly.
+- A missing, malformed, or truncated final answer earns 0 only for that problem.
+- You do not need to solve the problems in the presented order.
+- First scan all problems, then choose the problems you expect to solve most
+  reliably with the fewest tokens.
+- If the budget is tight, prefer reaching candidate final answers for more
+  problems over long polished solutions for fewer problems.
+- You may attempt any subset of the problems. Solving all problems is not
+  required, and an unattempted problem receives zero credit.
+- Do not fabricate a candidate answer merely to fill every problem slot.
+- If you cannot solve a problem, record your best final answer or record
+  "No answer".
+- For every problem you attempt, make the intended final answer easy to
+  identify.
+
+Problems:
+
+{numbered_content}

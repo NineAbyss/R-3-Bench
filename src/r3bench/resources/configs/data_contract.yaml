@@ -1,0 +1,32 @@
+schema_version: "1.0"
+contract_version: "1.0"
+dataset_host: huggingface
+domains:
+  coding:
+    relative_path: coding.jsonl
+    problem_count: 300
+    suite_count: 50
+    problems_per_suite: 6
+    difficulty_counts_per_suite:
+      easy: 3
+      medium: 2
+      hard: 1
+  math:
+    relative_path: math.jsonl
+    problem_count: 300
+    suite_count: 50
+    problems_per_suite: 6
+    difficulty_counts_per_suite:
+      easy: 3
+      medium: 2
+      hard: 1
+  abstract_reasoning:
+    relative_path: abstract_reasoning.jsonl
+    problem_count: 300
+    suite_count: 50
+    problems_per_suite: 6
+    difficulty_counts_per_suite:
+      easy: 3
+      medium: 2
+      hard: 1
+

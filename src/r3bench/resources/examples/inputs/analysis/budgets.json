@@ -1,0 +1,17 @@
+{
+  "schema_version": "3.0",
+  "budgets": [
+    {
+      "domain": "math",
+      "model_key": "toy-model",
+      "setting": "tool_free",
+      "budget_unit": "output_tokens",
+      "condition_id": "custom_tokens_8",
+      "condition_kind": "custom",
+      "contest_budget": 8,
+      "response_curve_grid": [0, 3, 6, 9],
+      "budget_profile": null,
+      "rho": null
+    }
+  ]
+}

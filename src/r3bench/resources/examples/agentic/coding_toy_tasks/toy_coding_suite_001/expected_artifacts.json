@@ -1,0 +1,50 @@
+{
+  "schema_version": "2.0",
+  "domain": "coding",
+  "artifacts": [
+    {
+      "problem_label": "A",
+      "container_path": "/app/solution_A.cpp",
+      "sandbox_relative_path": "app/solution_A.cpp",
+      "format": "C++17 source",
+      "required": false
+    },
+    {
+      "problem_label": "B",
+      "container_path": "/app/solution_B.cpp",
+      "sandbox_relative_path": "app/solution_B.cpp",
+      "format": "C++17 source",
+      "required": false
+    },
+    {
+      "problem_label": "C",
+      "container_path": "/app/solution_C.cpp",
+      "sandbox_relative_path": "app/solution_C.cpp",
+      "format": "C++17 source",
+      "required": false
+    },
+    {
+      "problem_label": "D",
+      "container_path": "/app/solution_D.cpp",
+      "sandbox_relative_path": "app/solution_D.cpp",
+      "format": "C++17 source",
+      "required": false
+    },
+    {
+      "problem_label": "E",
+      "container_path": "/app/solution_E.cpp",
+      "sandbox_relative_path": "app/solution_E.cpp",
+      "format": "C++17 source",
+      "required": false
+    },
+    {
+      "problem_label": "F",
+      "container_path": "/app/solution_F.cpp",
+      "sandbox_relative_path": "app/solution_F.cpp",
+      "format": "C++17 source",
+      "required": false
+    }
+  ],
+  "grade_after_episode": true,
+  "live_correctness_feedback": false
+}

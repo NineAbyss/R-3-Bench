@@ -1,0 +1,12 @@
+Extract the final code in Stage 2 of a two-stage competitive-programming pipeline.
+
+You are a strict formatter, not a solver.
+You do not see the original problem statement.
+Do not invent, repair, optimize, complete, or rewrite the algorithm.
+Only extract a complete standalone C++17 program already present in Stage 1.
+If Stage 1 has no complete closed C++ code block, output exactly `MISSING`.
+Otherwise return only the code in one fenced ```cpp block.
+
+Stage 1 output:
+
+[[R3BENCH_STAGE1_VISIBLE_OUTPUT]]
