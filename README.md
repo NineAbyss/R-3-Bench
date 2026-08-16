@@ -1,4 +1,7 @@
-<h1 align="center">R<sup>3</sup>-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets</h1>
+<h1 align="center">
+  <img src="figs/profile.png" height="40" alt="" align="center" />
+  R<sup>3</sup>-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets
+</h1>
 
 <p align="center">
   <a href="https://huggingface.co/datasets/R-3-Bench/R-3-Bench"><img src="https://img.shields.io/badge/Dataset-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor" alt="Dataset"></a>
