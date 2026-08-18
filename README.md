@@ -6,7 +6,7 @@
 <p align="center">
   <a href="https://huggingface.co/datasets/R-3-Bench/R-3-Bench"><img src="https://img.shields.io/badge/Dataset-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor" alt="Dataset"></a>
   <a href="https://github.com/NineAbyss/R-3-Bench"><img src="https://img.shields.io/badge/Code-000000?style=for-the-badge&logo=github&logoColor=white" alt="Code"></a>
-  <a href="https://github.com/NineAbyss/R-3-Bench/blob/main/paper/R_3Bench0817.pdf"><img src="https://img.shields.io/badge/Paper-PDF-b31b1b.svg?style=for-the-badge" alt="Paper"></a>
+  <a href="https://arxiv.org/abs/2608.16033"><img src="https://img.shields.io/badge/arXiv-2608.16033-b31b1b.svg?style=for-the-badge" alt="arXiv"></a>
 </p>
 
 This is the official implementation of the following paper:
